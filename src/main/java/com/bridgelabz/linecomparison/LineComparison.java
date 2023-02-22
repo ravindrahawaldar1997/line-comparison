@@ -31,12 +31,15 @@ public class LineComparison {
         Double length2 = Math.sqrt((Math.pow((x4 - x3), 2)) + (Math.pow((y4 - y3), 2)));
         System.out.println("Length of second line is: " + length2);
 
-        boolean result = length2.equals(length1);
+        int result = length2.compareTo(length1);
 
-        if (result == true) {
+        if (result == 0) {
             System.out.println("Lines are equal");
+        } else if (result > 0) {
+            System.out.println("line 2 is greater than line 1 ");
         } else {
-            System.out.println("Lines are not equal");
+            System.out.println("Line 1 is greater than line 2 ");
         }
+
     }
 }
